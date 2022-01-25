@@ -1,5 +1,5 @@
 {
-  "app": "python3 -m bin.app",
+  "app": "python3 -m cdk.app",
   "watch": {
     "include": [
       "**"

@@ -15,7 +15,8 @@
 		}
 	},
 	"mounts": [
-		"source=${env:HOME}${env:USERPROFILE}/.aws,target=/home/vscode/.aws,type=bind"
+		"source=${env:HOME}${env:USERPROFILE}/.aws,target=/home/vscode/.aws,type=bind",
+		"source=${env:HOME}${env:USERPROFILE}/.ssh,target=/home/vscode/.ssh,type=bind"
 	],
 
 	// Set *default* container specific settings.json values on container create.
@@ -31,7 +32,22 @@
 		"python.linting.mypyPath": "/usr/local/py-utils/bin/mypy",
 		"python.linting.pycodestylePath": "/usr/local/py-utils/bin/pycodestyle",
 		"python.linting.pydocstylePath": "/usr/local/py-utils/bin/pydocstyle",
-		"python.linting.pylintPath": "/usr/local/py-utils/bin/pylint"
+		"python.linting.pylintPath": "/usr/local/py-utils/bin/pylint",
+		"files.exclude": {
+			"**/.git": true,
+			"**/.svn": true,
+			"**/.hg": true,
+			"**/CVS": true,
+			"**/.DS_Store": true,
+			"**/Thumbs.db": true,
+			"**/__pycache__": true,
+			"**/*.pyc": true,
+			"cache": true,
+		},
+		"files.watcherExclude": {
+			"cdk.out/**": true,
+			".pytest_cache/**": true
+		}
 	},
 
 	// Add the IDs of extensions you want installed when the container is created.
